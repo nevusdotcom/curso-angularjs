@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="CustomDirective">
+<head>
+    <meta charset="UTF-8">
+    <title>Directivas Personalizadas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="general.css">
+</head>
+<body ng-controller="AppCtrl" class="centered-body">
+<h1>Repositorios:</h1>
+<ul class="no-list" ng-cloak>
+    <li ng-repeat="repo in repos">
+        <h2>{{repo.name}}</h2>
+        <!--<img ng-src="{{repo.owner.avatar_url}}">-->
+        <div back-img="{{repo.owner.avatar_url}}" circular></div>
+    </li>
+</ul>
+</body>
+</html>
