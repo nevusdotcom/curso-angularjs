@@ -2,19 +2,32 @@
 <html ng-app="CustomDirective">
 <head>
     <meta charset="UTF-8">
-    <title>Directivas Personalizadas</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <script src="app.js"></script>
     <link rel="stylesheet" type="text/css" href="general.css">
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.js"
+            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+            crossorigin="anonymous"></script>
+    <script
+            src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"
+            integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+            crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <title>Directivas Personalizadas</title>
 </head>
 <body ng-controller="AppCtrl" class="centered-body">
+
 <h1>Repositorios:</h1>
+
+<input type="text" my-auto-complete="repos" placeholder="Buscar Repositorios">
+
 <ul class="no-list" ng-cloak>
-    <li ng-repeat="repo in repos">
+    <li ng-repeat="repo in posts" ng-hide="main_repo && main_repo != repo.name">
         <h2>{{repo.name}}</h2>
-        <!--<img ng-src="{{repo.owner.avatar_url}}">-->
         <div back-img="{{repo.owner.avatar_url}}" circular></div>
     </li>
 </ul>
 </body>
 </html>
+

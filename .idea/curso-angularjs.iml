@@ -18,5 +18,7 @@
     <orderEntry type="library" name="angular-local-storage" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery-3.1.1" level="application" />
+    <orderEntry type="library" name="angular-animate" level="application" />
+    <orderEntry type="library" name="jquery-ui" level="application" />
   </component>
 </module>
